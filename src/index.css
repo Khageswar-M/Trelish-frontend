@@ -1,0 +1,317 @@
+:root {
+  background-color: #242424;
+}
+
+body {
+  background-color: #242424;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#applicationHeader {
+  background-color: transparent;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+#appHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0px 25px;
+}
+
+#navUl {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+#formContainer {
+  position: absolute;
+  width: 30%;
+  height: 50%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* #loginContainer {
+  position: absolute;
+  width: 30%;
+  height: 50%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+} */
+
+#loginForm {
+  position: relative;
+  height: 60%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+#loginForm1 {
+  position: relative;
+  height: 265px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+#logoutBtn {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 10%;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+
+#todoList {
+  position: absolute;
+  top: 20%;
+  right: 28%;
+  border-radius: 10px;
+}
+
+thead {
+  color: gray;
+}
+
+tbody {
+  color: white;
+}
+
+tbody td {
+  cursor: pointer;
+  padding: 2px 10px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+tbody td:hover {
+  background-color: hsla(0, 0%, 50%, 0.191);
+}
+
+table thead th {
+  border: 1px solid white;
+  padding: 0px 20px;
+}
+
+#deleteBtn,
+#editBtn {
+  border: none;
+  background-color: transparent;
+}
+
+#formControl form label,
+h1 {
+  color: white;
+}
+
+#controlForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 400px;
+  padding: 10px;
+}
+
+#formPurpose,
+#submitContrl {
+  text-align: center;
+}
+
+#formControl {
+  position: absolute;
+  top: 20%;
+  right: 10px;
+
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#addButton {
+  width: 100%;
+  text-align: center;
+}
+
+i {
+  margin: 4px;
+}
+
+tbody tr td span {
+  /* background-color: palegreen; */
+  border-radius: 5px;
+  padding: 0px 5px;
+}
+
+#low {
+  background-color: hsla(122, 39%, 49%, 0.2);
+  /* background-color: hsl(47, 100%, 25%); */
+
+}
+
+#medium {
+  background-color: hsla(54, 100%, 62%, 0.2);
+}
+
+#high {
+  background-color: hsla(4, 90%, 58%, 0.2);
+}
+
+#pending {
+  background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+#inprogress {
+  background-color: hsla(36, 100%, 50%, 0.2);
+}
+
+#completed {
+  background-color: hsla(207, 90%, 54%, 0.2);
+}
+
+#controlTitle,
+#controlDescription,
+#controlStatus,
+#controlPriority,
+#controlDueDate {
+  background-color: #4c5159;
+  color: white;
+  font-family: Verdana, sans-serif;
+}
+
+#appName,
+#navUl {
+  margin-bottom: 0px;
+}
+
+ul li:hover {
+  color: hsl(222, 100%, 50%);
+}
+
+#loginContainer {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
+  box-shadow: 0px 0px 5px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+      background-color: #252525;
+}
+
+#loginContainer1 {
+  position: absolute;
+  top: 61%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 43%;
+  box-shadow: 0px 0px 5px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #252525;
+}
+
+#getEmailInput,
+#getPasswordInput,
+#getEmailInput1 {
+  position: relative;
+  width: 95%;
+  color: white;
+}
+
+#emailInput,
+#emailInput1,
+#passwordInput1,
+#passwordInput {
+  background-color: transparent;
+  color: white;
+}
+
+#emailInput::placeholder,
+#emailInput1::placeholder,
+#passwordInput1::placeholder,
+#passwordInput::placeholder {
+  color: gray;
+}
+
+/* #formSubmitBtn{
+  width: 100;
+} */
+
+#loginSubmitBtn {
+  font-weight: bold;
+  font-size: 1.3rem;
+  width: 95%;
+  box-shadow: 0px 0px 5px #131313;
+}
+
+
+.errorAlert {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: handleAlert 0.5s ease-in-out;
+}
+
+@keyframes handleAlert {
+  0% {
+    top: 5%;
+  }
+
+  100% {
+    top: 18%;
+  }
+}
+
+.successAlert {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: handleAlert 0.5s ease-in-out;
+}
+
+@keyframes handleAlert {
+  0% {
+    top: 5%;
+  }
+
+  100% {
+    top: 18%;
+  }
+}
