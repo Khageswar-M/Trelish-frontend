@@ -3,13 +3,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 
 import { AuthProvider } from './Services/AuthContext';
+import { Suspense, lazy } from 'react';
 
-import Todos from './Components/Todos';
+const Todos = lazy( () => import ('./Components/Todos'));
+const Login= lazy(() => import('./Components/Login'));
+const Signup= lazy(() => import('./Components/Signup'));
+const About= lazy(() => import('./Components/About'));
+const Home= lazy(() => import('./Components/Home'));
+
 import Header from './Components/Header';
-import Login from './Components/Login';
-import Signup from './Components/Signup';
-import About from './Components/About';
-import Home from './Components/Home';
+import Loader from './Components/Loader';
 
 function App() {
 
@@ -18,6 +21,7 @@ function App() {
       <BrowserRouter>
         <AuthProvider>
         <Header />
+        <Suspense fallback={<Loader/>}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
@@ -25,7 +29,9 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/signin' element={<Signup />} />
           <Route path='/about' element={<About />} />
+
         </Routes>
+        </Suspense>
         </AuthProvider>
       </BrowserRouter>
     </>
