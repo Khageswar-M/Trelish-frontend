@@ -24,16 +24,16 @@ const Login = () => {
         setUserId } = useAuth();
 
 
-    // useEffect(() => {
-    //     if (isInvalid) {
-    //         const timer = setTimeout(() => {
-    //             setIsInvalid(false);
-    //         }, 4000);
+    useEffect(() => {
+        if (isInvalid) {
+            const timer = setTimeout(() => {
+                setIsInvalid(false);
+            },2000);
 
-    //         return () => { clearTimeout(timer) }
-    //     }
+            return () => { clearTimeout(timer) }
+        }
 
-    // }, [isInvalid])
+    }, [isInvalid])
 
     //function for handle login
     const handleLogin = async (e) => {
@@ -48,10 +48,6 @@ const Login = () => {
             setAuthUser({
                 Name: email
             })
-
-            window.location.href = "/todos";
-
-
 
         } catch (error) {
             console.error(error);
