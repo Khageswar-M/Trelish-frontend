@@ -2,7 +2,7 @@ import axios from "axios";
 
 // const BASE_URL = import.meta.env.VITE_API_URL;
 
-const BASE_URL = VITE_API_URL_DEV;
+const BASE_URL = import.meta.env.VITE_API_URL_DEV;
 
 export default BASE_URL;
 
