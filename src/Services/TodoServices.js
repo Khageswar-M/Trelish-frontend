@@ -2,6 +2,12 @@ import axios from "axios";
 
 // const BASE_URL = import.meta.env.VITE_API_URL;
 
+<<<<<<< HEAD
+=======
+// const BASE_URL = import.meta.env.MODE === "development" 
+//   ? import.meta.env.VITE_API_URL_DEV 
+//   : import.meta.env.VITE_API_URL_PROD;
+>>>>>>> 34937b2 (vercel)
 const BASE_URL = import.meta.env.VITE_API_URL_DEV;
 
 export default BASE_URL;
