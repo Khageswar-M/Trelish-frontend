@@ -1,5 +1,7 @@
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {HashRouter as Router, Routes, Route} from 'react-router-dom';
+
 import './App.css'
 
 import { AuthProvider } from './Services/AuthContext';
@@ -18,7 +20,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <Router>
         <AuthProvider>
         <Header />
         <Suspense fallback={<Loader/>}>
@@ -33,7 +35,7 @@ function App() {
         </Routes>
         </Suspense>
         </AuthProvider>
-      </BrowserRouter>
+      </Router>
     </>
   )
 }
